@@ -120,8 +120,7 @@ export function AnimatedContainer({
     animate(newAnimationValue);
   }, [animate, isVisible]);
 
-  return (
-    <Animated.View
+  return (isVisible && <Animated.View
       testID={getTestId('AnimatedContainer')}
       onLayout={computeViewDimensions}
       style={[styles.base, styles[position], animationStyles]}
